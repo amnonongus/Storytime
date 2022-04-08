@@ -14,7 +14,8 @@ Rough wireframe draft:
 
 Routes guide:
 
-![image](https://user-images.githubusercontent.com/100539234/162536133-c44d0c0c-4d65-4726-b534-5c0dc14e5a74.png)
+![image](https://user-images.githubusercontent.com/100539234/162540996-4c97b6ba-92e2-42c2-9cc5-739070593221.png)
+
 
 
 
