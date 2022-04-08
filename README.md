@@ -4,6 +4,16 @@ Here is my ERD structure for 'Storytime':
 Link to my Trello: https://trello.com/b/SIHvmyR1/sei-project-2-storytime
 
 
+Rough wireframe draft:
+
+![image](https://user-images.githubusercontent.com/100539234/162536027-11c0d0c6-9a3f-49e2-bd50-fcf56c3e0d65.png)
+
+![image](https://user-images.githubusercontent.com/100539234/162536048-58fe36cc-a28b-42ac-999a-6958b8baf62b.png)
+
+![image](https://user-images.githubusercontent.com/100539234/162536053-830cb165-616d-4685-a197-07bb0dc9a8f2.png)
+
+
+
 
 
 
