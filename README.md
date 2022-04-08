@@ -1,3 +1,33 @@
+Here is my ERD structure for 'Storytime':
+![image](https://user-images.githubusercontent.com/100539234/162518135-81160d5b-cad5-43c1-acd7-825686ee91f8.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # passport-boilerplate
 
 
