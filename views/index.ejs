@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<!-- <h2>Start a story!</h2> -->
+
+<% if (user) { %>
+
+    <h2>Start a story!</h2>
+
+<form id="add-story-form" method="POST" action="/stories">
+    <label>Story:</label>
+    <textarea name="story-content"></textarea>
+    <input type="submit" value="Add Story">
+</form>  
+
+<% } else { %> 
+
+    <h5>Log in to start a story!</h5>
+
+<% } %>
+
+<%- include('partials/footer') %>

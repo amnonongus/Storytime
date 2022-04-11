@@ -6,7 +6,9 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
+
+
+
 // load the env consts
 require('dotenv').config();
 
@@ -17,6 +19,10 @@ const app = express();
 require('./config/database');
 // configure Passport
 require('./config/passport');
+
+const indexRoutes = require('./routes/index');
+const commentsRoutes = require('./routes/comments')
+const storiesRoutes = require('./routes/stories')
 
 
 
@@ -39,6 +45,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 
 // Add this middleware BELOW passport middleware
