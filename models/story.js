@@ -18,12 +18,16 @@ const commentSchema = new Schema({
 
 
 const storySchema = new Schema({
-    title: {type: String, required: true, unique: true},   
+    title: {
+        type: String, 
+        required: true, 
+        unique: true
+    },   
     content: [commentSchema]
-},
-{
-    timestamps: true, 
-});
+ },
+    {
+    timestamps: true 
+})
 
 
 
