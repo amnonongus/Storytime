@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const commentsCtrl = require('../controllers/comments');
+// const express = require('express');
+// const router = express.Router();
+// const commentsCtrl = require('../controllers/comments');
 
 
 // router.put('home/comment/:id', commentsCtrl.update);
@@ -10,4 +10,4 @@ const commentsCtrl = require('../controllers/comments');
 
 
 
-module.exports = router;
+// module.exports = router;

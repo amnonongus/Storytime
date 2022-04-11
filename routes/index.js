@@ -9,6 +9,13 @@ router.get('/', function(req, res){
     title: 'Storytime'
   })
 })
+
+router.get('/stories', function(req, res){
+  res.render('Stories/show', {
+    title: 'stories'
+  })
+})
+
   // Where do you want to go for the root route
   // in the student demo this was res.redirect('/students'), what do you want?
   // This could be a landing page, or just redirect to your main resource page which you'll have an a tag that makes 

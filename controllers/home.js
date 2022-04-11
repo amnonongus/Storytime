@@ -1,5 +1,5 @@
-//const Comment = require('..models/comment');
-//const story = require('../models/story');
+// const Comment = require('..models/comment');
+// const story = require('../models/story');
 
 
 
@@ -8,6 +8,7 @@ function index(req, res) {
        title: 'Index'
    })
 }
+// ^^^ renders the 'home' page
 
 
 module.exports = {
