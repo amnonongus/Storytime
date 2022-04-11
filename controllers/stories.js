@@ -1,29 +1,37 @@
-// const Comment = require('..models/comment');
-//  const Story = require('../models/story');
+const Story = require('../models/story');
+var router = require('express').Router();
 
 
-// function create(req, res) {
-//     Story.findByID({
-//         'stories._id': req.params.findOne}, function(err, storyFromDatabase){
-//             req.body.user = req.user._id;
-//             req.body.userName = req.user.name;
-//             req.body.userAvatar = req.user.avatar;
 
-//             storyFromDatabase.stories.push(req.body);
-//             storyFromDatabase.save(function (err){
-//                 res.redirect('/stories');
-//             });
-//         });
-// }
+router.get('/', function(req, res){
+    res.render('stories/new', {
+      title: 'Storytime'
+    })
+  })
+  
+  router.get('/index', function(req, res){
+    res.render('stories/index', {
+      title: 'stories'
+    })
+  })
 
-function show(req, res) {
-    res.render("stories/show", {
-        title: "Show Stories"
-    });
-}
+  router.post('/', function (req, res){
+      console.log(req.body)
+      Story.create(req.body, function(err, story) {
+        console.log(story);
+        res.redirect('stories/index')
+      })    
+  })
 
 
-module.exports = {
-    show
-}
+//router.get 
+
+// ^^ story show page also 
+
+  module.exports = router
+
+
+
+
+
 

@@ -20,9 +20,9 @@ require('./config/database');
 // configure Passport
 require('./config/passport');
 
-const indexRoutes = require('./routes/index');
-const commentsRoutes = require('./routes/comments')
-const storiesRoutes = require('./routes/stories')
+const usersCtrl = require('./controllers/users');
+const commentsCtrl = require('./controllers/comments')
+const storiesCtrl = require('./controllers/stories')
 
 
 
@@ -57,8 +57,9 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
-
+app.use('/', usersCtrl);
+app.use('/stories', storiesCtrl);
+app.use('/comments', commentsCtrl);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
