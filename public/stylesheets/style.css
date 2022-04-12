@@ -137,8 +137,10 @@ table td {
 }
 	
 li {
-  font-weight: bold;
-}
+  font-weight: ;
+  margin-left: -125px;
+  margin-bottom: -5px;
+}  
 
 .login {
   display: flex;
@@ -160,4 +162,8 @@ li {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+#comment-page {
+  display: inline;
 }

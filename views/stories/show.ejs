@@ -5,19 +5,24 @@
     <div>
         <%= story.title %>
     </div>
-    <div></div>
+    
 </section>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Comment</th>
-        </tr>
-    </thead>
+ <section id="comment-page">
+    <% story.content.forEach(function(c, index) { %>
+            <p>"<%= c.content %>"</p>  
+            <% if (user && user._id.equals(c.userID) && story.content.length === index +1) { %>
+                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+            <% } %>
+
+    <% }); %>  
+</section>
+
+<!-- <table>
     <tbody>
-      <% story.content.forEach(function(c) { %>
+      <% story.content.forEach(function(c, index) { %>
         <tr>
             <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>"><% c.userName %></td>
             <td>
@@ -27,8 +32,8 @@
                 <%= c.content %>
             </td>
             <td>
-                <% if (user && user._id.equals(c.user)) { %>
-                    <form action="/stories/<<%= c._id %>?_method=DELETE" method="POST">
+                <% if (user && user._id.equals(c.userID) && story.content.length === index) { %>
+                    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                       <button type="submit">X</button>
                     </form>
                 <% } %>
@@ -37,7 +42,7 @@
     
       <% }); %>  
     </tbody>
-</table>
+</table> -->
 
 <br><br>
 
@@ -45,7 +50,7 @@
 
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
         <label>Add to story:</label>
-        <textarea name="content"></textarea>
+        <textarea name="content" maxlength="60"></textarea>
         <input type="submit" value="Submit">
     </form>
 

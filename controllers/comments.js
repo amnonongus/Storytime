@@ -24,6 +24,26 @@ router.post('/stories/:id', function(req, res){
 });
 
 
+router.delete('/:id', function(req, res, next){
+  Story.findOne({'content._id': req.params.id}, function(err, storyDocument){
+    console.log(storyDocument)
+    const comment = storyDocument.content.id(req.params.id);
+    console.log(comment)
+    if(!comment.userID.equals(req.user._id)) return res.redirect(`/stories/${storyDocument._id}`);
+    comment.remove()
+    storyDocument.save(function(err){
+      if(err) next(err);
+      res.redirect(`/stories/${storyDocument._id}`)
+    });
+  });
+});
+
+
+
+
+
+
+
 // router.post('/:id', function (req, res) {
 //     console.log('HEY BRO NEW ROUTE')
 //     Story.content.create(req.body, function(err, story) {

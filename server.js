@@ -22,7 +22,8 @@ require('./config/passport');
 
 const usersCtrl = require('./controllers/users');
 const commentsCtrl = require('./controllers/comments')
-const storiesCtrl = require('./controllers/stories')
+const storiesCtrl = require('./controllers/stories');
+const res = require('express/lib/response');
 
 
 
@@ -55,6 +56,9 @@ app.use(function (req, res, next) {
   // single ejs view
   next();
 });
+app.get('/', function(req, res){
+  res.redirect('/stories')
+})
 
 // mount all routes with appropriate base paths
 app.use('/', usersCtrl);
