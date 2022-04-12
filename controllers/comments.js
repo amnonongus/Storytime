@@ -1,4 +1,4 @@
-const Story = require('../models/story');
+const Story = require('../models/story')
 var router = require('express').Router();
 
 //router.put for editing specific comment that you've entered
@@ -11,17 +11,25 @@ var router = require('express').Router();
 
 
 router.post('/stories/:id', function(req, res){
+    console.log('helllo post route')
     Story.findById(req.params.id, function(err, storyFromDatabase) {
-        req.body.user = req.user._id;
-        req.body.userName = req.user.name;
-        req.body.userAvatar = req.user.avatar;
-            storyFromDatabase.content.push(req.body);
-            storyFromDatabase.save(function(err) {
-                console.log(storyFromDatabase);
-                res.redirect(`/stories/${storyFromDatabase._id}`); 
+        req.body.userID = req.user._id;
+        console.log(storyFromDatabase)
+         storyFromDatabase.content.push(req.body);
+         storyFromDatabase.save(function(err) {
+          console.log(storyFromDatabase);
+          res.redirect(`/stories/${storyFromDatabase._id}`); 
         });
     });
 });
+
+
+// router.post('/:id', function (req, res) {
+//     console.log('HEY BRO NEW ROUTE')
+//     Story.content.create(req.body, function(err, story) {
+//       res.redirect(`/stories/${storyFromDatabase._id}`);
+//     });
+// });
 
 
 module.exports = router

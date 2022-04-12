@@ -22,6 +22,7 @@ router.get('/index', async function(req, res){
 
 
 router.post('/', function (req, res){
+  console.log('HELLO HELLO HELLO HELLO')
     Story.create(req.body, function(err, story) {
         res.redirect('stories/index')
       })    
@@ -29,7 +30,7 @@ router.post('/', function (req, res){
 
 
 
-router.get('/:id', async function(req, res) {
+router.get('/:id', async function(req, res){
     const story = await Story.findById(req.params.id)
     console.log(story)
             res.render('stories/show', {
@@ -40,10 +41,10 @@ router.get('/:id', async function(req, res) {
     
     
 
-// ^^ story show page also 
+
+
 
   module.exports = router
-
 
 
 

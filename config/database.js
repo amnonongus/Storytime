@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // replace your database connection string here
 
-mongoose.connect('mongodb://localhost/storytime', {
+mongoose.connect('mongodb://localhost/storytime1', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
