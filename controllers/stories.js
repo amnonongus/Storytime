@@ -12,9 +12,11 @@ router.get('/', function(req, res){
   
 
 
-  router.get('/index', function(req, res){
+  router.get('/index', async function(req, res){
+      const stories = await Story.find()
     res.render('stories/index', {
-      title: 'stories'
+      title: 'stories',
+      stories: stories
     })
   })
 
@@ -29,8 +31,8 @@ router.post('/', function (req, res){
 
   router.get('/:id', async function(req, res) {
     const story = await Story.findById(req.params.id)
-        console.log(story)
-            res.render('stories/index', {
+    console.log(story)
+            res.render('stories/show', {
                 story: story,
                 title: 'Story Detail'
         });    
