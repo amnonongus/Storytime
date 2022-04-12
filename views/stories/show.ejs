@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Title: </div>
+    <div>
+        <%= story.title %>
+    </div>
+    <div></div>
+</section>
+
+<br><br>
+
+<% if (user) {%> 
+
+    <form id="add-review-form" method="POST" action="/stories/<%= story._id %>">
+        <label>Add to story:</label>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Add Review">
+    </form>
+
+<% } %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% story.content.forEach(function(c) { %>
+        <tr>
+            <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>"><% c.userName %></td>
+            <td>
+                <%= c.createdAt.toLocaleDateString() %>
+            </td>
+            <td> 
+                <%= c.content %>
+            </td>
+            <td>
+                <% if (user && user._id.equals(c.user)) { %>
+                    <form action="/stories/<<%= c._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                <% } %>
+            </td>
+        </tr>
+    
+      <% }); %>  
+    </tbody>
+</table>
+
+
+<%- include('../partials/footer') %>
