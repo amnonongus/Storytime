@@ -1,51 +1,26 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <div>Title: </div>
-    <div>
-        <%= story.title %>
-    </div>
-    
+ <div>Title: </div>
+ <div>
+   <%= story.title %>
+ </div>
 </section>
 
- <section id="comment-page">
-    <% story.content.forEach(function(c, index) { %>
-            <p>"<%= c.content %>"</p>  
-            <% if (user && user._id.equals(c.userID) && story.content.length === index +1) { %>
-                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
-                </form>
-                <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
-                <button type="edit">Edit</button>
-                </form>
-            <% } %>
+<section id="comment-page">
+ <% story.content.forEach(function(c, index) { %>
+  <p>"<%= c.content %>"</p>  
+    <% if (user && user._id.equals(c.userID) && story.content.length === index +1) { %>
+    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+    </form>
+    <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+        <button type="edit">Edit</button>
+    </form>
+     <% } %>
 
-    <% }); %>  
+ <% }); %>  
 </section>
-
-<!-- <table>
-    <tbody>
-      <% story.content.forEach(function(c, index) { %>
-        <tr>
-            <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>"><% c.userName %></td>
-            <td>
-                <%= c.createdAt.toLocaleDateString() %>
-            </td>
-            <td> 
-                <%= c.content %>
-            </td>
-            <td>
-                <% if (user && user._id.equals(c.userID) && story.content.length === index) { %>
-                    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
-                    </form>
-                <% } %>
-            </td>
-        </tr>
-    
-      <% }); %>  
-    </tbody>
-</table> -->
 
 <br><br>
 
@@ -53,11 +28,43 @@
 
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
         <label>Add to story:</label>
-        <textarea name="content" maxlength="60"></textarea>
+        <textarea name="content" maxlength="35"></textarea>
         <input type="submit" value="Submit">
     </form>
 
 <% } %>
 
-
 <%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+<!-- <table>
+    <tbody>
+        <% story.content.forEach(function(c, index) { %>
+            <tr>
+                <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>"><% c.userName %></td>
+                <td>
+                    <%= c.createdAt.toLocaleDateString() %>
+                </td>
+                <td> 
+                    <%= c.content %>
+                </td>
+                <td>
+                    <% if (user && user._id.equals(c.userID) && story.content.length === index) { %>
+                        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                          <button type="submit">X</button>
+                        </form>
+                    <% } %>
+                </td>
+            </tr>
+        
+          <% }); %>  
+        </tbody>
+    </table> -->
+    

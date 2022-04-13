@@ -1,20 +1,19 @@
 <%- include('../partials/header') %>
+
 <table id="list">
-    <thead>
-        <tr>
-          <th>Story:</th>
-        </tr>
-    </thead>
+  <thead>
+    <tr>
+      <th>Story:</th>
+    </tr>
+  </thead>
     <tbody>
         <% stories.forEach(function(s) { %>
-            <tr>
-             <td><%= s.title %></td>
-             <td><a href="/stories/<%= s._id %>">DETAILS</a></td>
-            </tr>
-          <% }); %> 
-   </tbody>
+          <tr>
+            <td><%= s.title %></td>
+            <td><a href="/stories/<%= s._id %>">DETAILS</a></td>
+          </tr>
+        <% }); %> 
+    </tbody>
 </table>
-
-
 
 <%- include('../partials/footer') %>
