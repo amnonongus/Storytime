@@ -43,13 +43,26 @@ router.delete('/:id', function(req, res, next){
 
 
 
+// router.put('/:id', function(req, res){
+//   Story.findById(req.params.id, function(err, storyFromDatabase){
+//     req.body.userID = req.user._id;
+//     storyFromDatabase.content.findByIdAndUpdate(req.params.id, req.body)
+//     res.redirect(`/stories/${storyFromDatabase._id}`)
+//   })
+// })
+ 
 
-// router.post('/:id', function (req, res) {
-//     console.log('HEY BRO NEW ROUTE')
-//     Story.content.create(req.body, function(err, story) {
-//       res.redirect(`/stories/${storyFromDatabase._id}`);
-//     });
+
+
+
+
+// router.put('/:id', async function (req, res, next){
+//   console.log('what is going on')
+//   const updatePost = await Story.findByIdAndUpdate(req.params.id, req.body, {new: true});
+//     res.redirect('/stories/' + req.params.id)
 // });
+
+
 
 
 module.exports = router

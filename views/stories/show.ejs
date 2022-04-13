@@ -15,6 +15,9 @@
                 <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
+                <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                <button type="edit">Edit</button>
+                </form>
             <% } %>
 
     <% }); %>  
