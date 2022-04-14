@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+
 <section id="show-page">
  <div>Title: </div>
   <div>
@@ -26,7 +27,7 @@
 <% if (user) {%> 
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
         <label>Add to story:</label>
-        <textarea name="content" maxlength="35"></textarea>
+        <textarea id="ta" name="content" maxlength="35"></textarea>
         <input type="submit" value="Submit">
     </form>
 <% } %>

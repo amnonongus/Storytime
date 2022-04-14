@@ -1,19 +1,29 @@
 <%- include('../partials/header') %>
 
+
 <% if (user) { %>
-
-<h2>Start a story!</h2>
-
+<div class="row justify-content-center">
+    <div class="col-md-3">
+<p>Storytime is an improv game where a player starts a story with a declarative statement. 
+Other players jump in, adding snipets of information until you have a completely fleshed out tale.</p>
+    </div>
+</div>
+  <div class="row justify-content-center">
+    <div class="col-md-3">
 <form id="add-story-form" method="POST" action="/stories">
     <label>Story:</label>
-    <textarea name="title"></textarea>
+    <textarea name="title" maxlength="60"></textarea>
     <input type="submit" value="Add Story">
 </form>  
+    </div>
+  </div>
+
 
 <% } else { %> 
 
 <h5>Log in to start a story!</h5>
 
 <% } %>
+
 
 <%- include('../partials/footer') %>

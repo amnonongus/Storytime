@@ -1,4 +1,4 @@
-* {
+ /* * {
   box-sizing: border-box;
   font-family: Helvetica;
   color: #424748;
@@ -14,7 +14,7 @@ body {
     "main"
 }
 
-body > nav {
+ body > nav {
   grid-area: nav;
   background-color: #B8C0C2;
   display: flex;
@@ -166,4 +166,24 @@ li {
 
 #comment-page {
   display: inline;
-}
+} 
+ */
+
+/* nav {
+  background-color: gray;
+  padding: 5px;
+} */
+
+/* main {
+  position: absolute;
+  background-image: url('../images/campfire.webp');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+} */
+
+/* body, html {
+  height: 100%;
+} */

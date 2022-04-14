@@ -2,22 +2,13 @@ const mongoose = require('mongoose');
 
 // replace your database connection string here
 
-mongoose.connect('mongodb://localhost/storytime1', {
+
+
+mongoose.connect(process.env.DATABASE_URL,{ 
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
-
-
-
-
-
-
-
-// mongoose.connect(process.env.DATABASE_URL,{ 
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true
-// });
 
 const db = mongoose.connection;
 

@@ -9,14 +9,28 @@
   <title><%= title %></title>
 </head>
 <body>
-  <nav>
+  <nav id="nav">
     <% if (user) { %>
-    <a href="/stories/index" <%- title === 'All Movies' ? 'class="active"' : '' %>>VIEW STORIES</a>
-    <a href="/stories" <%- title === 'Add Movie' ? 'class="active"' : '' %>>HOME</a>
+    <a href="/stories/index">VIEW STORIES</a>
+    <a href="/stories">HOME</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
   </nav>
   <main>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
     <h1><%= title %></h1>
+    </div>
+  </div>
+
+
+
+
+  
+
+
+
+
+    
