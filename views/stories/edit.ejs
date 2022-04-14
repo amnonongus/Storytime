@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+
+<form action="/comments/<%= comment._id %>?_method=PUT" method="POST">
+    <textarea name="content" maxlength="35"><%= comment.content %></textarea>
+    <button type="edit">Edit</button>
+</form>
+
+<%- include('../partials/footer') %>

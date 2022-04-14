@@ -2,9 +2,9 @@
 
 <section id="show-page">
  <div>Title: </div>
- <div>
+  <div>
    <%= story.title %>
- </div>
+  </div>
 </section>
 
 <section id="comment-page">
@@ -14,10 +14,9 @@
     <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
         <button type="submit">X</button>
     </form>
-    <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
-        <button type="edit">Edit</button>
-    </form>
-     <% } %>
+    <a href="/comments/<%= c._id %>/edit/"><button type="edit">Edit</button></a>
+    
+    <% } %>
 
  <% }); %>  
 </section>
@@ -25,13 +24,11 @@
 <br><br>
 
 <% if (user) {%> 
-
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
         <label>Add to story:</label>
         <textarea name="content" maxlength="35"></textarea>
         <input type="submit" value="Submit">
     </form>
-
 <% } %>
 
 <%- include('../partials/footer') %>

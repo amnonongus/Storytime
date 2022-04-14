@@ -32,6 +32,7 @@ router.post('/', function (req, res){
 
 router.get('/:id', async function(req, res){
     const story = await Story.findById(req.params.id)
+    .populate()
     console.log(story)
             res.render('stories/show', {
                 story: story,

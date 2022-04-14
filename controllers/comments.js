@@ -33,17 +33,36 @@ router.delete('/:id', function(req, res, next){
 
 
 
-router.put('/:id', function(req, res){
-  Story.findById(req.params.id, function(err, storyFromDatabase){
-    req.body.userID = req.user._id;
-    storyFromDatabase.content.findByIdAndUpdate(req.params.id, req.body)
-    res.redirect(`/stories/${storyFromDatabase._id}`)
+router.put('/:id', function(req, res, next){
+  Story.findOne({'content._id': req.params.id}, function(err, storyFromDatabase){
+    const storyFrom = storyFromDatabase.content.id(req.params.id);
+    console.log(storyFrom, '<===== storyFrom is here') 
+    if(!storyFrom.userID.equals(req.user._id)) return res.redirect(`/stories/${storyFromDatabase._id}`);
+    console.log(req.body.content, '<=== here is req.body.content')
+    storyFrom.content = req.body.content
+    storyFromDatabase.save()
+    // Story.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    // storyFromDatabase.save(function(err){
+      if(err) next(err);
+      res.redirect(`/stories/${storyFromDatabase._id}`);
+  });
+});
+
+
+
+router.get('/:id/edit', function (req, res, next) {
+  if (!req.user) return res.redirect("/stories");
+  Story.findOne({'content._id': req.params.id}, function(err, storyDoc){
+    const comment = storyDoc.content.id(req.params.id);
+    if(!comment.userID.equals(req.user._id)) return res.redirect(`/stories/${storyDoc._id}`);
+    res.render('stories/edit', {
+      comment: comment,
+      title: 'Comment Edit'
+    })
   })
 })
- 
 
 
 module.exports = router
-
 
 
