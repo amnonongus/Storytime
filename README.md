@@ -53,6 +53,7 @@ Future improves include:
   - Make the music play more fluidly from page to page and add different songs. 
   - Push stories with most recent comments to the top of the index page.
   - Create subreddit esk catagories, funny, fiction, etc. 
+  - add Admin privledges to damage control innappropriate comments 
 _______________________________________________________________
 
 
