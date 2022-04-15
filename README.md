@@ -1,35 +1,81 @@
-# passport-boilerplate
+**STORYTIME**:
+_________________________________________________________
+ Storytime is a storytelling app inspired by an improv warm up game where performers make short, declarative statements
+before passing the mic to the next person to continue the story in whatever way they see fit. Users can create new stories,
+view and add comments to existing stories, and delete and update their own comments so long as they are the most recent comment
+in the story. 
 
 
-This is your passport boilerplate.
 
-## Setup 
+**WIREFRAME**:
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+Landing page
+__________________________________________________________
+![image](https://user-images.githubusercontent.com/100539234/163513867-a349637c-0742-4900-a18a-a2c96ca7e283.png)
+
+Home page once a user is logged in:
+__________________________________________________________
+![image](https://user-images.githubusercontent.com/100539234/163513915-92c2f7b2-0566-4279-a19a-3660d35fcf81.png)
+
+Index page of created stories:
+__________________________________________________________
+![image](https://user-images.githubusercontent.com/100539234/163514007-1d5e53bc-bdb2-4ac2-a0d9-fc3e478655a4.png)
+
+And a view page where users can add, edit and delete comments to stories:
+__________________________________________________________
+![image](https://user-images.githubusercontent.com/100539234/163514120-95170fe9-885c-40cc-b0fc-dde23ecf3402.png)
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
 
-#### Setup your login
+**TECHNOLOGIES USED**:
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+HTML, CSS, Javascript, Node.js, Express, Mongoose, MongoDB & Mongo Atlas, Google OAuth.
+___________________________________________________________
 
-#### Make a commit 
 
-```git commit -m "setup up oauth and User Model"```
+**GETTING STARTED**:
+
+A link to the app: https://storytime-project-2.herokuapp.com/
+
+Trello Link to project management: https://trello.com/b/SIHvmyR1/sei-project-2-storytime
+____________________________________________________________
+
+
+**NEXT STEPS**:
+
+Future improves include:
+  - Implementing an upvote type system for peoples favorite stories.
+  - Working on the display a bit; I like the vibe but it's hard to read when text overlaps the fire.
+  - Improve delete parameters, you should only be able to delete if you are user AND most recent comment, to help maintain story integrity.
+  - Displaying user names and timestamps next to comments.
+  - Implement logic to show how many characters are remaining in form submission.
+  - Form boxes currently one of the only non-responsives elements on the site, need to fix this.
+  - Make the music play more fluidly from page to page and add different songs. 
+_______________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
