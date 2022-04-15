@@ -13,9 +13,9 @@
   <p>"<%= c.content %>"</p>  
     <% if (user && user._id.equals(c.userID) && story.content.length === index +1) { %>
     <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
+        <button id="xBtn" type="submit">X</button>
     </form>
-    <a href="/comments/<%= c._id %>/edit/"><button type="edit">Edit</button></a>
+    <a href="/comments/<%= c._id %>/edit/"><button id="editBtn2" type="edit">Edit</button></a>
     
     <% } %>
 
@@ -26,9 +26,8 @@
 
 <% if (user) {%> 
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
-        <label>Add to story:</label>
         <textarea id="ta" name="content" maxlength="35"></textarea>
-        <input type="submit" value="Submit">
+        <input id="btn2" type="submit" value="Submit">
     </form>
 <% } %>
 
@@ -42,27 +41,3 @@
 
 
 
-<!-- <table>
-    <tbody>
-        <% story.content.forEach(function(c, index) { %>
-            <tr>
-                <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>"><% c.userName %></td>
-                <td>
-                    <%= c.createdAt.toLocaleDateString() %>
-                </td>
-                <td> 
-                    <%= c.content %>
-                </td>
-                <td>
-                    <% if (user && user._id.equals(c.userID) && story.content.length === index) { %>
-                        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                          <button type="submit">X</button>
-                        </form>
-                    <% } %>
-                </td>
-            </tr>
-        
-          <% }); %>  
-        </tbody>
-    </table> -->
-    
