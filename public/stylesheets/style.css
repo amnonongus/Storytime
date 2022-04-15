@@ -174,16 +174,91 @@ li {
   padding: 5px;
 } */
 
-/* main {
+ body {
   position: absolute;
-  background-image: url('../images/campfire.webp');
+  background-image: url('../images/campfire.gif');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
-} */
+} 
 
-/* body, html {
-  height: 100%;
-} */
+h1 {
+  font-family: 'My Soul', cursive;
+  font-size: 80px;
+  text-align: center;
+  color: red;
+  padding: 30px;
+}
+
+#directions {
+  text-align: center;
+  color: orange;
+  max-width: 30%;
+  margin: 0 auto;
+  padding: 5px;
+  font-weight: bolder;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#story-form {
+  text-align: center;
+  padding: 150px;
+  position: absolute;
+  left: 411px;
+  top: 234px;
+}
+
+#list {
+  text-align: center;
+  width: 100vw;
+  color: orange;
+  position: relative;
+  left: 100px;
+}
+
+.login img {
+  height: 30px;
+  text-align: center;
+}
+
+#button {
+  position: relative;
+  top: 24px;
+  left: -129px;
+  background-color: orange;
+  font-family: Impact;
+}
+
+#login-div {
+  width: 100vw;
+  text-align: center;
+  color: orange;
+  padding: 120px;
+
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+#text-area {
+  background: gray;
+  color: rgb(54, 39, 10);
+}
+
+#show-page{
+  color: orange;
+}
+
+#comment-page {
+  color: orange;
+}
+

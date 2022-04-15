@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 
+<
+
 <table id="list">
   <thead>
     <tr>
@@ -9,7 +11,7 @@
     <tbody>
         <% stories.forEach(function(s) { %>
           <tr>
-            <td><%= s.title %></td>
+            <td>"<%= s.title %>"</td>
             <td><a href="/stories/<%= s._id %>">DETAILS</a></td>
           </tr>
         <% }); %> 
@@ -17,3 +19,5 @@
 </table>
 
 <%- include('../partials/footer') %>
+
+

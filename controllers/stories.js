@@ -12,7 +12,7 @@ router.get('/', function(req, res){
 router.get('/index', async function(req, res){
     const stories = await Story.find()
     res.render('stories/index', {
-      title: 'stories',
+      title: 'Stories',
       stories: stories
     })
   })
