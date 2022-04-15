@@ -17,7 +17,7 @@ passport.use(
 		console.log('this profile ^ from google --------------------------------------------------')
 		// Has a user logged in with oauth before?	
 		User.findOne({googleId: profile.id}, function(err, user){
-			// if user is defined, thenn we found someone, so that means they have logged in before
+			// if user is defined, then we found someone, so that means they have logged in before
 			// if user is undefined that means they have never logged in
 			if(user) return cb(null, user); // passes the information to the next spot in the middleware chain
 			if(err) return cb(err)

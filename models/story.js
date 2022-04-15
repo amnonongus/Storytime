@@ -15,8 +15,6 @@ const commentSchema = new Schema({
     timestamps: true
 });
 
-
-
 const storySchema = new Schema({
     title: {
         type: String, 
@@ -28,7 +26,6 @@ const storySchema = new Schema({
     {
     timestamps: true 
 })
-
 
 
 module.exports = mongoose.model('Story', storySchema);
