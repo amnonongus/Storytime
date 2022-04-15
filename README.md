@@ -5,6 +5,8 @@ before passing the mic to the next person to continue the story in whatever way 
 view and add comments to existing stories, and delete and update their own comments so long as they are the most recent comment
 in the story. 
 
+
+
 **WIREFRAME**:
 
 Landing page
@@ -23,15 +25,21 @@ And a view page where users can add, edit and delete comments to stories:
 __________________________________________________________
 ![image](https://user-images.githubusercontent.com/100539234/163514120-95170fe9-885c-40cc-b0fc-dde23ecf3402.png)
 
+
+
 **TECHNOLOGIES USED**:
 
 HTML, CSS, Javascript, Node.js, Express, Mongoose, MongoDB & Mongo Atlas, Google OAuth.
+___________________________________________________________
+
 
 **GETTING STARTED**:
 
 A link to the app: https://storytime-project-2.herokuapp.com/
 
 Trello Link to project management: https://trello.com/b/SIHvmyR1/sei-project-2-storytime
+____________________________________________________________
+
 
 **NEXT STEPS**:
 
@@ -43,7 +51,7 @@ Future improves include:
   - Implement logic to show how many characters are remaining in form submission.
   - Form boxes currently one of the only non-responsives elements on the site, need to fix this.
   - Make the music play more fluidly from page to page and add different songs. 
-
+_______________________________________________________________
 
 
 
