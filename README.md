@@ -1,6 +1,6 @@
 **STORYTIME**:
-
-Storytime is a storytelling app inspired by an improv warm up game where performers make short, declarative statements
+_________________________________________________________
+  Storytime is a storytelling app inspired by an improv warm up game where performers make short, declarative statements
 before passing the mic to the next person to continue the story in whatever way they see fit. Users can create new stories,
 view and add comments to existing stories, and delete and update their own comments so long as they are the most recent comment
 in the story. 
