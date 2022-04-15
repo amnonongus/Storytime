@@ -52,6 +52,7 @@ Future improves include:
   - Form boxes currently one of the only non-responsives elements on the site, need to fix this.
   - Make the music play more fluidly from page to page and add different songs. 
   - Push stories with most recent comments to the top of the index page.
+  - Create subreddit esk catagories, funny, fiction, etc. 
 _______________________________________________________________
 
 
