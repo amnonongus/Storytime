@@ -2,7 +2,7 @@ const Story = require('../models/story');
 var router = require('express').Router();
 
 // <===== Renders the "home" page =====>
-router.get('/', function(req, res){
+router.get('/', isLoggedIn, function(req, res){
     res.render('stories/new', {
      title: 'Storytime'
     })

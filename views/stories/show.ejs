@@ -26,7 +26,7 @@
 
 <% if (user) {%> 
     <form id="add-review-form" method="POST" action="/comments/stories/<%= story._id %>">
-        <textarea id="ta" name="content" maxlength="35"></textarea>
+        <textarea id="ta" name="content" maxlength="60"></textarea>
         <input id="btn2" type="submit" value="Submit">
     </form>
 <% } %>
