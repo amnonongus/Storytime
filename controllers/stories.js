@@ -1,5 +1,7 @@
 const Story = require('../models/story');
 var router = require('express').Router();
+const isLoggedIn = require('../config/auth');
+
 
 // <===== Renders the "home" page =====>
 router.get('/', isLoggedIn, function(req, res){
